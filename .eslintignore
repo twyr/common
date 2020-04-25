@@ -1,0 +1,6 @@
+buildresults/
+docs/
+logs/
+node_modules/
+test/mocha.*
+gruntfile.js
