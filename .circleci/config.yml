@@ -16,7 +16,7 @@ commands:
             - twyr-common-dependencies-
       - run:
           name: Install node dependencies
-          command: npm prune && npm i && npm up
+          command: npm i
 
       # Cache dependencies
       - save_cache:
