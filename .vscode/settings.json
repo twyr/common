@@ -1,0 +1,10 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+
+	"files.autoSave": "afterDelay",
+
+	"html.format.indentHandlebars": true
+}
