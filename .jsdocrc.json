@@ -1,0 +1,61 @@
+{
+	"tags": {
+		"allowUnknownTags": true
+	},
+	"source": {
+		"include": ["./", "./README.md", "./CODE_OF_CONDUCT.md", "./CONTRIBUTING.md", "./LICENSE.md"],
+		"exclude": [
+			".circleci",
+			"deploy",
+			"docs",
+			"logs",
+			"node_modules"
+		],
+		"includePattern": ".+\\.js(doc)?$",
+		"excludePattern": "(docs/)"
+	},
+	"opts": {
+		"template": "./node_modules/docdash",
+		"destination": "./jsdoc_default",
+		"readme": "./README.md",
+		"package": "./package.json",
+		"encoding": "utf8",
+		"recurse": true,
+		"verbose": true
+	},
+	"plugins": [
+		"plugins/markdown",
+		"plugins/summarize"
+	],
+	"templates": {
+		"cleverLinks": true,
+		"monospaceLinks": false,
+		"referenceTitle": "Twy'r Common",
+		"disableSort": false,
+		"default": {
+			"outputSourceFiles": true,
+			"includeDate": false
+		}
+	},
+	"docdash": {
+		"static": true,
+		"sort": true,
+		"openGraph": {
+			"title": "Twy'r Common",
+			"type": "documentation",
+			"image": "./jsdoc_assets/img/logo.png",
+			"site_name": "Twyr Common",
+			"url": "https://twyr.github.io/common"
+		},
+		"meta": {
+			"title": "Twy'r Common",
+			"description": "Twy'r Common",
+			"keyword": "twyr"
+		},
+		"search": true,
+		"collapse": true,
+		"typedefs": false,
+		"removeQuotes": "none",
+		"scripts": []
+	}
+}
