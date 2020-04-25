@@ -8,7 +8,7 @@ Template repository defining the absolute minimum that all Twy'r projects must a
 [![Dependabot](https://badgen.net/dependabot/twyr/common/258831598?icon=dependabot)](https://app.dependabot.com/accounts/twyr/repos/258831598)
 [![Known Vulnerabilities](https://snyk.io/test/github/twyr/common/badge.svg)](https://snyk.io/test/github/twyr/common)
 [![CircleCI](https://circleci.com/gh/twyr/common.svg?style=shield&circle-token=5b5a717014a209604624b6e25cee1552e6174315)](https://circleci.com/gh/twyr/common)
-
+[![Coverage Status](https://coveralls.io/repos/github/twyr/common/badge.svg?branch=master)](https://coveralls.io/github/twyr/common?branch=master)
 
 #### Compatibility
 * Node.js v14 or above

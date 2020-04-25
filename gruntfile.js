@@ -6,6 +6,20 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		'pkg': grunt.file.readJSON('package.json'),
 
+		'coveralls': {
+			// Options relevant to all targets
+			'options': {
+				'force': true
+			},
+
+			'common': {
+				'src': 'buildresults/coverage/lcov.info',
+				'options': {
+					// Any options for just this target
+				}
+			}
+		},
+
 		'env': {
 			'mochaTest': {
 				'NODE_ENV': 'test'
@@ -98,9 +112,11 @@ module.exports = function(grunt) {
 		'clean': ['buildresults/eslint-orig.xml', 'buildresults/eslint-no-bugs.xml', 'buildresults/eslint-no-empty-testcases.xml', 'buildresults/eslint-no-empty-testsuites.xml', 'buildresults/coverage.raw.json']
 	});
 
-	grunt.loadNpmTasks('grunt-eslint');
 	grunt.loadNpmTasks('grunt-env');
+	grunt.loadNpmTasks('grunt-eslint');
 	grunt.loadNpmTasks('grunt-xmlstoke');
+	grunt.loadNpmTasks('grunt-jsbeautifier');
+	grunt.loadNpmTasks('grunt-coveralls');
 
-	grunt.registerTask('default', ['exec:clean', 'env', 'eslint', 'exec:test', 'exec:docs', 'xmlstoke:deleteESLintBugs', 'xmlstoke:deleteEmptyTestcases', 'xmlstoke:deleteEmptyTestsuites', 'xmlstoke:prettify', 'exec:rename-docs', 'clean', 'jsbeautifier', 'exec:organize_build_results']);
+	grunt.registerTask('default', ['exec:clean', 'env', 'eslint', 'exec:test', 'exec:docs', 'xmlstoke:deleteESLintBugs', 'xmlstoke:deleteEmptyTestcases', 'xmlstoke:deleteEmptyTestsuites', 'xmlstoke:prettify', 'exec:rename-docs', 'clean', 'jsbeautifier', 'exec:organize_build_results', 'coveralls']);
 };

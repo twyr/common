@@ -16,7 +16,7 @@ commands:
             - twyr-common-dependencies-
       - run:
           name: Install node dependencies
-          command: npm prune && npm i && npm up
+          command: npm i
 
       # Cache dependencies
       - save_cache:
@@ -32,7 +32,10 @@ workflows:
 
   workflow-build-and-test:
     jobs:
-      - job-build-and-test
+      - job-build-and-test:
+          filters:
+            branches:
+              only: master
 
 jobs:
   job-build-and-test:
