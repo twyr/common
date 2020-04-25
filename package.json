@@ -62,7 +62,7 @@
 		"debug": "node --inspect-brk ./index.js",
 		"dev-start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && BLUEBIRD_DEBUG=1 DEBUG=* node ./index.js",
 		"start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && node ./index.js",
-		"docs": "npx jsdoc --verbose --configure ./jsdoc.json",
+		"docs": "npx jsdoc --verbose --configure ./.jsdocrc.json",
 		"lint": "npx npm-run-all --continue-on-error --serial lint:*",
 		"lint:js": "npx eslint .",
 		"test": "npx npm-run-all --continue-on-error --serial test:run test:coverage",
