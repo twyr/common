@@ -1,5 +1,4 @@
 ## The Common Project [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) 
-------------------------------------------------------------------------------
 Template repository defining the absolute minimum that all Twy'r projects must adhere to.
 
 [![License: MITNFA](https://img.shields.io/badge/License-MIT-yellow.svg)](https://spdx.org/licenses/MITNFA.html)
@@ -23,7 +22,7 @@ npm install
 ```
 
 #### Usage
-[] TODO
+- [ ] TODO
 
 #### Contributing
 See the [Contributing](CONTRIBUTING.md) guide for details.
