@@ -1,0 +1,107 @@
+{
+	"name": "common",
+	"version": "2.0.3-development",
+	"description": "Template repository pre-configured with the basic minimum every Twy'r project should contain/implement/etc.",
+	"homepage": "https://twyr.github.io/common",
+	"license": "MITNFA",
+	"main": "index.js",
+	"readmeFilename": "README.md",
+	"keywords": [
+		"twyr",
+		"common",
+		"template",
+		"git",
+		"npm",
+		"jsdoc",
+		"mocha",
+		"chai",
+		"istanbul",
+		"husky",
+		"commitizen",
+		"commitlint",
+		"circleci",
+		"coveralls",
+		"lgtm",
+		"dependabot",
+		"snyk"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://github.com/twyr/common.git"
+	},
+	"bugs": {
+		"url": "https://github.com/twyr/common/issues",
+		"email": "shadyvd@hotmail.com"
+	},
+	"author": {
+		"name": "Vish Desai",
+		"email": "shadyvd@hotmail.com",
+		"url": "https://github.com/shadyvd"
+	},
+	"maintainers": [
+		{
+			"name": "Vish Desai",
+			"email": "shadyvd@hotmail.com",
+			"url": "https://github.com/shadyvd"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Vish Desai",
+			"email": "shadyvd@hotmail.com",
+			"url": "https://github.com/shadyvd"
+		}
+	],
+	"directories": {
+		"doc": "doc",
+		"test": "tests"
+	},
+	"scripts": {
+		"build": "npx grunt",
+		"clean": "mkdir -p ./docs && rm -rf ./docs && mkdir -p ./buildresults && rm -rf ./buildresults && mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && mkdir -p ./.nyc_output && rm -rf ./.nyc_output",
+		"debug": "node --inspect-brk ./index.js",
+		"dev-start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && BLUEBIRD_DEBUG=1 DEBUG=* node ./index.js",
+		"start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && node ./index.js",
+		"docs": "npx jsdoc --verbose --configure ./jsdoc.json",
+		"lint": "npx npm-run-all --continue-on-error --serial lint:*",
+		"lint:js": "npx eslint .",
+		"test": "npx npm-run-all --continue-on-error --serial test:run test:coverage",
+		"test:coverage": "NODE_ENV=test npx nyc --reporter=cobertura --reporter=lcovonly --reporter=text --reporter=text-summary mocha",
+		"test:run": "NODE_ENV=test npx mocha --reporter=spec"
+	},
+	"dependencies": {
+		"bluebird": "^3.7.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
+		"chai-json": "^1.0.0",
+		"commitizen": "^4.0.4",
+		"cz-conventional-changelog": "^3.1.0",
+		"docdash": "^1.2.0",
+		"eslint": "^6.8.0",
+		"eslint-junit": "^1.0.1",
+		"eslint-plugin-jsdoc": "^24.0.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-security": "^1.4.0",
+		"grunt": "^1.1.0",
+		"grunt-contrib-clean": "^2.0.0",
+		"grunt-env": "*",
+		"grunt-eslint": "^22.0.0",
+		"grunt-exec": "*",
+		"grunt-jsbeautifier": "*",
+		"grunt-xmlstoke": "^0.7.1",
+		"husky": "^4.2.5",
+		"is-promise": "2.1.0",
+		"jsdoc": "^3.6.4",
+		"lint-staged": "^10.1.7",
+		"load-grunt-tasks": "^5.1.0",
+		"mocha": "^7.1.1",
+		"mocha-junit-reporter": "^1.23.3",
+		"mocha-prepare": "^0.1.0",
+		"npm-run-all": "^4.1.5",
+		"nyc": "15.0.1"
+	}
+}
