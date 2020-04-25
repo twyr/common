@@ -32,10 +32,7 @@ workflows:
 
   workflow-build-and-test:
     jobs:
-      - job-build-and-test:
-          filters:
-            branches:
-              only: master
+      - job-build-and-test
 
 jobs:
   job-build-and-test:
@@ -49,3 +46,7 @@ jobs:
       - node-deps
       - run:
           command: npm run build
+
+    filters:
+      branches:
+        only: master
