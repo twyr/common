@@ -46,7 +46,3 @@ jobs:
       - node-deps
       - run:
           command: npm run build
-
-    filters:
-      branches:
-        only: master
