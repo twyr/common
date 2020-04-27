@@ -95,7 +95,7 @@
 		"grunt-jsbeautifier": "*",
 		"grunt-xmlstoke": "^0.7.1",
 		"husky": "^4.2.5",
-		"is-promise": "3.0.0",
+		"is-promise": "^3.0.0",
 		"jsdoc": "^3.6.4",
 		"lint-staged": "^10.1.7",
 		"load-grunt-tasks": "^5.1.0",
