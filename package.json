@@ -97,7 +97,7 @@
 		"husky": "^4.2.5",
 		"is-promise": "3.0.0",
 		"jsdoc": "^3.6.4",
-		"lint-staged": "^10.1.7",
+		"lint-staged": "^10.2.0",
 		"load-grunt-tasks": "^5.1.0",
 		"mocha": "^7.1.2",
 		"mocha-junit-reporter": "^1.23.3",
