@@ -1,0 +1,18 @@
+{{#unless (optionEquals "global-index-format" "none")~}}
+	{{optionSet "global-index-format" "dl"~}}
+	{{>global-index-table kind=kind title=title ~}}
+{{/unless~}}
+
+{{#unless (optionEquals "module-index-format" "none")~}}
+	{{optionSet "module-index-format" "dl"~}}
+	{{>module-index-table kind=kind title=title ~}}
+{{/unless~}}
+
+{{#unless (optionEquals "member-index-format" "none")~}}
+	{{optionSet "member-index-format" "dl"~}}
+{{/unless~}}
+
+# {{changeCase "title" (package "name")}}
+> {{package "description"}}
+
+{{>main}}
