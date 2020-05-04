@@ -119,7 +119,7 @@ module.exports = {
 		      leave out if you want to exclude neither (recommended!)
 		*/
 		exclude: {
-			path: '.circleci|.github|.vscode|buildresults|coverage|deploy|docs|log|node_modules|ecosystem.config.js|gruntfile.js|test/setup_mocks.js',
+			path: '.circleci|.github|.vscode|buildresults|coverage|deploy|docs|jsdoc_default|log|node_modules|stats|ecosystem.config.js|gruntfile.js|test/setup_mocks.js',
 			dynamic: true
 		},
 
