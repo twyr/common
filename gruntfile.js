@@ -49,9 +49,11 @@ module.exports = function(grunt) {
 			'rename-docs': {
 				'command': 'mv ./jsdoc_default/common/<%= pkg.version %> ./docs && rm -r ./jsdoc_default'
 			},
-
 			'test': {
 				'command': 'npm run-script test'
+			},
+			'restore-theme': {
+				'command': 'git checkout ./docs/_config.yml'
 			}
 		},
 
@@ -118,5 +120,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jsbeautifier');
 	grunt.loadNpmTasks('grunt-coveralls');
 
-	grunt.registerTask('default', ['exec:clean', 'env', 'eslint', 'exec:test', 'exec:docs', 'xmlstoke:deleteESLintBugs', 'xmlstoke:deleteEmptyTestcases', 'xmlstoke:deleteEmptyTestsuites', 'xmlstoke:prettify', 'exec:rename-docs', 'clean', 'jsbeautifier', 'exec:organize_build_results', 'coveralls']);
+	grunt.registerTask('default', ['exec:clean', 'env', 'eslint', 'exec:test', 'exec:docs', 'xmlstoke:deleteESLintBugs', 'xmlstoke:deleteEmptyTestcases', 'xmlstoke:deleteEmptyTestsuites', 'xmlstoke:prettify', 'exec:rename-docs', 'clean', 'jsbeautifier', 'exec:organize_build_results', 'exec:restore-theme', 'coveralls']);
 };
