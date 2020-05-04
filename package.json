@@ -58,7 +58,7 @@
 	},
 	"scripts": {
 		"build": "npx grunt",
-		"clean": "mkdir -p ./docs && rm -rf ./docs && mkdir -p ./buildresults && rm -rf ./buildresults && mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && mkdir -p ./.nyc_output && rm -rf ./.nyc_output",
+		"clean": "mkdir -p ./docs && rm -rf ./docs && mkdir -p ./buildresults && rm -rf ./buildresults && mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && mkdir -p ./.nyc_output && rm -rf ./.nyc_output && mkdir -p ./depcruise && rm -rf ./depcruise",
 		"debug": "node --inspect-brk ./index.js",
 		"dev-start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && BLUEBIRD_DEBUG=1 DEBUG=* node ./index.js",
 		"docs": "npx jsdoc --verbose --configure ./.jsdocrc.json",
@@ -66,8 +66,9 @@
 		"lint:js": "npx eslint .",
 		"release": "npx standard-version -a -t '@twyr/common@' --no-verify --prerelease 'dev' --release-as 'patch' --sign --dry-run",
 		"start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && node ./index.js",
-		"test": "npx npm-run-all --continue-on-error --serial test:run test:coverage",
+		"test": "npx npm-run-all --continue-on-error --serial test:run test:coverage test:deps",
 		"test:coverage": "NODE_ENV=test npx nyc --reporter=cobertura --reporter=lcovonly --reporter=text --reporter=text-summary mocha",
+		"test:deps": "mkdir -p depcruise && npx depcruise --config ./.dependency-cruiser.js --output-type json . -f ./depcruise/deps.json && npx depcruise-fmt --output-type archi ./depcruise/deps.json | dot -T svg > ./depcruise/archi.svg && npx depcruise-fmt --output-type err-html -f ./depcruise/error.html ./depcruise/deps.json",
 		"test:run": "NODE_ENV=test npx mocha --reporter=spec"
 	},
 	"dependencies": {
@@ -81,6 +82,7 @@
 		"chai-json": "^1.0.0",
 		"commitizen": "^4.0.5",
 		"cz-conventional-changelog": "^3.1.0",
+		"dependency-cruiser": "^9.0.0",
 		"docdash": "^1.2.0",
 		"eslint": "^6.8.0",
 		"eslint-junit": "^1.0.1",
