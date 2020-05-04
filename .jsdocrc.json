@@ -3,13 +3,20 @@
 		"allowUnknownTags": true
 	},
 	"source": {
-		"include": ["./", "./README.md", "./CODE_OF_CONDUCT.md", "./CONTRIBUTING.md", "./LICENSE.md"],
+		"include": ["./", "./README.md", "./CHANGELOG.md", "./CODE_OF_CONDUCT.md", "./CONTRIBUTING.md", "./LICENSE.md"],
 		"exclude": [
 			".circleci",
+			".github",
+			".nyc_output",
+			".vscode",
+			"buildresults",
+			"coverage",
 			"deploy",
 			"docs",
 			"logs",
-			"node_modules"
+			"node_modules",
+			"ecosystem.config.js",
+			"gruntfile.js"
 		],
 		"includePattern": ".+\\.js(doc)?$",
 		"excludePattern": "(docs/)"
