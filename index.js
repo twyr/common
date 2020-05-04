@@ -50,3 +50,10 @@ process.on('uncaughtException', (err) => {
 process.on('unhandledRejection', (reason, location) => {
 	console.error(`Unhandled Rejection: ${reason} at:`, location);
 });
+
+/**
+ * Start the actual process of doing business.
+ *
+ * @ignore
+ */
+require('./server/index.js');
