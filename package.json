@@ -58,7 +58,7 @@
 	},
 	"scripts": {
 		"build": "npx grunt",
-		"clean": "mkdir -p ./docs && rm -rf ./docs && mkdir -p ./buildresults && rm -rf ./buildresults && mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && mkdir -p ./.nyc_output && rm -rf ./.nyc_output && mkdir -p ./depcruise && rm -rf ./depcruise",
+		"clean": "mkdir -p ./docs && rm -rf ./docs && mkdir -p ./buildresults && rm -rf ./buildresults && mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && mkdir -p ./.nyc_output && rm -rf ./.nyc_output && mkdir -p ./depcruise && rm -rf ./depcruise && mkdir -p ./stats && rm -rf ./stats",
 		"debug": "node --inspect-brk ./index.js",
 		"dev-start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && BLUEBIRD_DEBUG=1 DEBUG=* node ./index.js",
 		"docs": "npx jsdoc --verbose --configure ./.jsdocrc.json",
@@ -66,6 +66,10 @@
 		"lint:js": "npx eslint .",
 		"release": "npx standard-version -a -t '@twyr/common@' --no-verify --prerelease 'dev' --release-as 'patch' --sign --dry-run",
 		"start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && node ./index.js",
+		"stats": "mkdir -p stats && npx npm-run-all --continue-on-error --serial stats:cc stats:sloc*",
+		"stats:cc": "npx eslintcc --average --greater-than D --format json --no-inline-config . | tee ./stats/complexity.json",
+		"stats:sloc-table": "npx sloc --details --format cli-table --exclude '.circleci|.github|.vscode|buildresults|coverage|deploy|docs|jsdoc_default|log|node_modules|stats|ecosystem.config.js|gruntfile.js|test/setup_mocks.js' --keys source,comment,todo,empty,total . | tee ./stats/sloc.txt",
+		"stats:sloc-json": "npx sloc --details --format json --exclude '.circleci|.github|.vscode|buildresults|coverage|deploy|docs|jsdoc_default|log|node_modules|stats|ecosystem.config.js|gruntfile.js|test/setup_mocks.js' . | tee ./stats/sloc.json",
 		"test": "npx npm-run-all --continue-on-error --serial test:run test:coverage test:deps",
 		"test:coverage": "NODE_ENV=test npx nyc --reporter=cobertura --reporter=lcovonly --reporter=text --reporter=text-summary mocha",
 		"test:deps": "mkdir -p depcruise && npx depcruise --config ./.dependency-cruiser.js --output-type json . -f ./depcruise/deps.json && npx depcruise-fmt --output-type archi ./depcruise/deps.json | dot -T svg > ./depcruise/archi.svg && npx depcruise-fmt --output-type err-html -f ./depcruise/error.html ./depcruise/deps.json",
@@ -89,6 +93,7 @@
 		"eslint-plugin-jsdoc": "^24.0.2",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-security": "^1.4.0",
+		"eslintcc": "^0.3.12",
 		"grunt": "^1.1.0",
 		"grunt-contrib-clean": "^2.0.0",
 		"grunt-coveralls": "^2.0.0",
@@ -107,6 +112,7 @@
 		"mocha-prepare": "^0.1.0",
 		"npm-run-all": "^4.1.5",
 		"nyc": "15.0.1",
+		"sloc": "^0.2.1",
 		"standard-version": "^7.1.0"
 	}
 }
