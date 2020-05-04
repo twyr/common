@@ -44,5 +44,11 @@ jobs:
     steps:
       - checkout
       - node-deps
+
+      - run:
+          name: install graphviz
+          command: |
+            sudo apt-get install graphviz
+
       - run:
           command: npm run build
