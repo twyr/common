@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 				'command': 'npm run-script docs'
 			},
 			'organize_build_results': {
-				'command': 'mkdir -p ./buildresults/mocha && mkdir -p ./buildresults/eslint && mv ./buildresults/lint.xml ./buildresults/eslint/results.xml && mv ./buildresults/tests.xml ./buildresults/mocha/results.xml && mv ./coverage ./buildresults && mv ./.nyc_output ./buildresults && mv ./depcruise ./buildresults'
+				'command': 'mkdir -p ./buildresults/mocha && mkdir -p ./buildresults/eslint && mv ./buildresults/lint.xml ./buildresults/eslint/results.xml && mv ./buildresults/tests.xml ./buildresults/mocha/results.xml && mv ./coverage ./buildresults && mv ./.nyc_output ./buildresults && mv ./depcruise ./buildresults && mv ./stats ./buildresults'
 			},
 			'rename-docs': {
 				'command': 'mv ./jsdoc_default/common/<%= pkg.version %> ./docs && rm -r ./jsdoc_default'
@@ -54,6 +54,9 @@ module.exports = function(grunt) {
 			},
 			'restore-theme': {
 				'command': 'git checkout ./docs/_config.yml'
+			},
+			'stats': {
+				'command': 'npm run-script stats'
 			}
 		},
 
@@ -105,7 +108,7 @@ module.exports = function(grunt) {
 		},
 
 		'jsbeautifier': {
-			'src': ['buildresults/*.xml', 'docs/*.html'],
+			'src': ['buildresults/**/*.json', 'buildresults/**/*.xml', 'docs/**/*.html'],
 			'options': {
 				'config': '.jsbeautifyrc'
 			}
@@ -120,5 +123,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-jsbeautifier');
 	grunt.loadNpmTasks('grunt-coveralls');
 
-	grunt.registerTask('default', ['exec:clean', 'env', 'eslint', 'exec:test', 'exec:docs', 'xmlstoke:deleteESLintBugs', 'xmlstoke:deleteEmptyTestcases', 'xmlstoke:deleteEmptyTestsuites', 'xmlstoke:prettify', 'exec:rename-docs', 'clean', 'jsbeautifier', 'exec:organize_build_results', 'exec:restore-theme', 'coveralls']);
+	grunt.registerTask('default', ['exec:clean', 'env', 'eslint', 'exec:test', 'exec:docs', 'exec:stats', 'xmlstoke:deleteESLintBugs', 'xmlstoke:deleteEmptyTestcases', 'xmlstoke:deleteEmptyTestsuites', 'xmlstoke:prettify', 'exec:rename-docs', 'clean', 'exec:organize_build_results', 'jsbeautifier', 'exec:restore-theme', 'coveralls']);
 };
