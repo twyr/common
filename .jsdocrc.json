@@ -7,7 +7,6 @@
 		"exclude": [
 			".circleci",
 			".github",
-			".jsdoc2md",
 			".nyc_output",
 			".vscode",
 			"buildresults",
