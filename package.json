@@ -1,6 +1,6 @@
 {
 	"name": "common",
-	"version": "2.0.3-dev.0",
+	"version": "2.0.3-alpha.0",
 	"description": "Template repository pre-configured with the basic minimum every Twy'r project should contain/implement/etc.",
 	"homepage": "https://twyr.github.io/common",
 	"license": "MITNFA",
@@ -64,7 +64,7 @@
 		"docs": "npx jsdoc --verbose --configure ./.jsdocrc.json",
 		"lint": "npx npm-run-all --continue-on-error --serial lint:*",
 		"lint:js": "npx eslint .",
-		"release": "npx standard-version -a -t '@twyr/common@' --no-verify --prerelease 'dev' --release-as 'patch' --sign --dry-run",
+		"release": "npx standard-version -a -t '@twyr/common@' --no-verify --prerelease 'alpha' --sign",
 		"start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && node ./index.js",
 		"stats": "mkdir -p stats && npx npm-run-all --continue-on-error --serial stats:cc stats:sloc*",
 		"stats:cc": "npx eslintcc --average --greater-than D --format json --no-inline-config . | tee ./stats/complexity.json",
