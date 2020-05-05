@@ -84,7 +84,7 @@
 		"chai": "^4.2.0",
 		"chai-http": "^4.3.0",
 		"chai-json": "^1.0.0",
-		"commitizen": "^4.0.5",
+		"commitizen": "4.0.5",
 		"cz-conventional-changelog": "^3.2.0",
 		"dependency-cruiser": "^9.0.0",
 		"docdash": "^1.2.0",
