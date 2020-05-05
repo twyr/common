@@ -1,3 +1,6 @@
+<a name="2.0.3-alpha.4"></a>
+## [2.0.3-alpha.4](https://github.com/twyr/common/compare/2.0.3-alpha.3...2.0.3-alpha.4) (2020-05-05)
+
 <a name="2.0.3-alpha.3"></a>
 ## 2.0.3-alpha.3 (2020-05-05)
 
