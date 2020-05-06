@@ -1,3 +1,4 @@
+### The Common Project [![License: MITNFA](https://img.shields.io/badge/License-MIT-yellow.svg)](https://spdx.org/licenses/MITNFA.html) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) 
 Template repository defining the absolute minimum that all Twy'r projects must adhere to.
 
 [![Dependabot](https://badgen.net/dependabot/twyr/common/258831598?icon=dependabot)](https://app.dependabot.com/accounts/twyr/repos/258831598)
@@ -14,24 +15,17 @@ Template repository defining the absolute minimum that all Twy'r projects must a
 [![Known Vulnerabilities](https://snyk.io/test/github/twyr/common/badge.svg)](https://snyk.io/test/github/twyr/common)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/twyr/common.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/twyr/common/alerts/)
 
+
 #### Compatibility
 * Node.js v14 or above
 
 
-#### Installation
-```
-git clone https://github.com/twyr/common.git
-cd common
-npm install
-```
+#### Contributing
+See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
 #### Usage
 - [ ] TODO
-
-
-#### Contributing
-See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
 #### License

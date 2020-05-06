@@ -1,4 +1,4 @@
-### Installation
+#### Installation
 ```
 git clone git+ssh://github.com/twyr/common
 cd common
@@ -6,11 +6,11 @@ npm i && npm up
 ```
 
 
-### Generating your GPG Key
+#### Generating your GPG Key
 [Managing commit signature verification](https://help.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
 
 
-### Setting up Git VCS configuration
+#### Setting up Git VCS configuration
 ```
 git config commit.gpgsign true`
 
@@ -24,14 +24,22 @@ git config user.email "your.name@twyr.com"
 git config user.signingKey "GPG Key Id"
 ```
 
-### Linting
+
+#### Linting
 * `npm run lint`
 
-### Running tests
+
+#### Collecting (mostly useless) Statistics
+* `npm run stats`
+
+
+#### Running tests
 * `npm run test`
 
-### Generating documentation
+
+#### Generating documentation
 * `npm run docs`
 
-### Building
+
+#### Building: The whole shebang
 * `npm run build`
