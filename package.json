@@ -64,7 +64,7 @@
 		"docs": "npx jsdoc --verbose --configure ./.jsdocrc.json",
 		"lint": "npx npm-run-all --continue-on-error --serial lint:*",
 		"lint:js": "npx eslint .",
-		"release": "npx release-it --preRelease",
+		"release": "npx release-it",
 		"start": "mkdir -p ./logs && touch ./logs/init.log && rm -f ./logs/*.log && node ./index.js",
 		"stats": "mkdir -p stats && npx npm-run-all --continue-on-error --serial stats:cc stats:sloc*",
 		"stats:cc": "npx eslintcc --average --greater-than D --format json --no-inline-config . | tee ./stats/complexity.json",
