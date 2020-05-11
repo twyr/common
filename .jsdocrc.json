@@ -1,9 +1,10 @@
 {
 	"tags": {
-		"allowUnknownTags": true
+		"allowUnknownTags": true,
+        "dictionaries": ["jsdoc"]
 	},
 	"source": {
-		"include": ["./", "./README.md", "./CHANGELOG.md", "./CODE_OF_CONDUCT.md", "./CONTRIBUTING.md", "./LICENSE.md"],
+		"include": "./",
 		"exclude": [
 			".circleci",
 			".github",
@@ -19,10 +20,10 @@
 			"gruntfile.js"
 		],
 		"includePattern": ".+\\.js(doc)?$",
-		"excludePattern": "(docs/)"
+		"excludePattern": "jsdoc_default/"
 	},
 	"opts": {
-		"template": "./node_modules/docdash",
+		"template": "./node_modules/braintree-jsdoc-template",
 		"destination": "./jsdoc_default",
 		"readme": "./README.md",
 		"package": "./package.json",
@@ -35,10 +36,11 @@
 		"plugins/summarize"
 	],
 	"templates": {
-		"cleverLinks": true,
+		"cleverLinks": false,
+		"collapse": true,
+		"disableSort": false,
 		"monospaceLinks": false,
 		"referenceTitle": "Twy'r Common",
-		"disableSort": false,
 		"default": {
 			"outputSourceFiles": true,
 			"includeDate": false
