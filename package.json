@@ -100,7 +100,7 @@
 		"grunt-contrib-clean": "^2.0.0",
 		"grunt-coveralls": "^2.0.0",
 		"grunt-env": "*",
-		"grunt-eslint": "^22.0.0",
+		"grunt-eslint": "^23.0.0",
 		"grunt-exec": "*",
 		"grunt-jsbeautifier": "*",
 		"grunt-xmlstoke": "^0.7.1",
