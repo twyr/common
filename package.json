@@ -93,7 +93,7 @@
 		"dependency-cruiser": "^9.3.0",
 		"eslint": "^7.0.0",
 		"eslint-junit": "^1.0.1",
-		"eslint-plugin-jsdoc": "^25.4.2",
+		"eslint-plugin-jsdoc": "^26.0.1",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-security": "^1.4.0",
 		"eslintcc": "^0.3.12",
