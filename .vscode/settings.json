@@ -6,5 +6,10 @@
 
 	"files.autoSave": "afterDelay",
 
-	"html.format.indentHandlebars": true
+	"html.format.indentHandlebars": true,
+	"githubPullRequests.remotes": [
+		"origin",
+		"twyr"
+	],
+	"githubPullRequests.showInSCM": true
 }
