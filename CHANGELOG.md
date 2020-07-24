@@ -1,3 +1,5 @@
+## [2.0.3-beta.2](https://github.com/twyr/common/compare/2.0.3-beta.1...2.0.3-beta.2) (2020-07-24)
+
 ## [2.0.3-beta.1](https://github.com/twyr/common/compare/2.0.3-beta.0...2.0.3-beta.1) (2020-07-24)
 
 <a name="2.0.3-beta.0"></a>
