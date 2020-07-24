@@ -1,6 +1,6 @@
 {
 	"name": "common",
-	"version": "2.0.3-beta.0",
+	"version": "2.0.3-beta.1",
 	"description": "Template repository pre-configured with the basic minimum every Twy'r project should contain/implement/etc.",
 	"homepage": "https://twyr.github.io/common",
 	"license": "MITNFA",
