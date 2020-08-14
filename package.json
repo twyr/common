@@ -79,7 +79,7 @@
 	},
 	"dependencies": {
 		"bluebird": "^3.7.2",
-		"lodash": ">=4.17.19"
+		"lodash": ">=4.17.20"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^9.1.1",
