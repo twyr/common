@@ -1,7 +1,7 @@
 #### CHANGE LOG
 
 
-## [2.0.3-beta.3](https://github.com/twyr/common/compare/2.0.3-beta.1...2.0.3-beta.3) (2020-07-24)
+## [2.0.3](https://github.com/twyr/common/compare/2.0.3-beta.1...2.0.3) (2020-07-24)
 
 ## [2.0.3-beta.2](https://github.com/twyr/common/compare/2.0.3-beta.1...2.0.3-beta.2) (2020-07-24)
 
