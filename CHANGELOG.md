@@ -1,6 +1,11 @@
 #### CHANGE LOG
 
 
+##### 19-Mar-2021
+
+docs(all): updated for the next release ([54ad8da2880a4a1fa69d576a05aaf10d50cf960b](https://github.com/twyr/common/commit/54ad8da2880a4a1fa69d576a05aaf10d50cf960b))#### CHANGE LOG
+
+
 ## [2.0.3](https://github.com/twyr/common/compare/2.0.3-beta.1...2.0.3) (2020-07-24)
 
 ## [2.0.3-beta.2](https://github.com/twyr/common/compare/2.0.3-beta.1...2.0.3-beta.2) (2020-07-24)
