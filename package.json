@@ -68,7 +68,7 @@
 		"chai": "4.3.4",
 		"chai-http": "4.3.0",
 		"chai-json": "1.0.0",
-		"commitizen": "4.2.3",
+		"commitizen": "4.2.4",
 		"cz-customizable": "6.3.0",
 		"dependency-cruiser": "9.26.1",
 		"eslint": "7.25.0",
