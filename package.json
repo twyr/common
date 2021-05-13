@@ -76,7 +76,7 @@
 		"eslint-plugin-jsdoc": "34.0.0",
 		"eslint-plugin-node": "11.1.0",
 		"eslint-plugin-security": "1.4.0",
-		"eslintcc": "0.6.6",
+		"eslintcc": "0.6.7",
 		"grunt": "1.4.0",
 		"grunt-contrib-clean": "2.0.0",
 		"grunt-coveralls": "2.0.0",
